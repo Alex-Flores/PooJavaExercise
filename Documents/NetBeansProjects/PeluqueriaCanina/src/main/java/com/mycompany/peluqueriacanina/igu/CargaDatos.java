@@ -1,8 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.mycompany.peluqueriacanina.igu;
+
+import com.mycompany.peluqueriacanina.logica.Controladora;
 
 /**
  *
@@ -10,10 +8,10 @@ package com.mycompany.peluqueriacanina.igu;
  */
 public class CargaDatos extends javax.swing.JFrame {
 
-    /**
-     * Creates new form CargaDatos
-     */
+    Controladora control = new Controladora();
+    
     public CargaDatos() {
+        // control = new Controladora();
         initComponents();
     }
 
@@ -202,6 +200,11 @@ public class CargaDatos extends javax.swing.JFrame {
         });
 
         btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -294,6 +297,20 @@ public class CargaDatos extends javax.swing.JFrame {
        cmbAlergico.setSelectedIndex(0);
        cmbAtEsp.setSelectedIndex(0);
     }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        String nombreMasco = txtNombre.getText();
+        String raza = txtRaza.getText();
+        String color = txtColor.getText();
+        String Observaciones = txtObservaciones.getText();
+        
+        String alergico = (String) cmbAlergico.getSelectedItem();
+        String atenEsp = cmbAtEsp.getSelectedItem();
+        
+        String nombreDuenio = txtNomDuenio.getText();
+        String celDuenio = txtCellDuenio.getText();
+        control.guardar();
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
