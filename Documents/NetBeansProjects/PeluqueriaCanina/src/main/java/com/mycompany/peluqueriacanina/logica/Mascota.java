@@ -17,6 +17,7 @@ public class Mascota implements Serializable {
     private String alegico;
     private String atencion_Especial;
     private String observaciones;
+    private String color;
     
     @OneToOne
     private Duenio unDuenio;
@@ -24,14 +25,23 @@ public class Mascota implements Serializable {
     public Mascota() {
     }
 
-    public Mascota(int num_cliente, String nombre, String raza, String alegico, String atencion_Especial, String observaciones, Duenio unDuenio) {
+    public Mascota(int num_cliente, String nombre, String raza, String color, String alegico, String atencion_Especial, String observaciones, Duenio unDuenio) {
         this.num_cliente = num_cliente;
         this.nombre = nombre;
         this.raza = raza;
+        this.color = color;
         this.alegico = alegico;
         this.atencion_Especial = atencion_Especial;
         this.observaciones = observaciones;
         this.unDuenio = unDuenio;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public int getNum_cliente() {

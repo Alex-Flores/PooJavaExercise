@@ -302,14 +302,14 @@ public class CargaDatos extends javax.swing.JFrame {
         String nombreMasco = txtNombre.getText();
         String raza = txtRaza.getText();
         String color = txtColor.getText();
-        String Observaciones = txtObservaciones.getText();
+        String observaciones = txtObservaciones.getText();
         
         String alergico = (String) cmbAlergico.getSelectedItem();
-        String atenEsp = cmbAtEsp.getSelectedItem();
+        String atenEsp = (String) cmbAtEsp.getSelectedItem();
         
         String nombreDuenio = txtNomDuenio.getText();
         String celDuenio = txtCellDuenio.getText();
-        control.guardar();
+        control.guardar(nombreMasco, raza, color, observaciones, alergico, atenEsp, nombreDuenio, celDuenio);
     }//GEN-LAST:event_btnGuardarActionPerformed
 
 
