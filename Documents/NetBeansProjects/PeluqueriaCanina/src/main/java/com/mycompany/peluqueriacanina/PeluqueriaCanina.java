@@ -14,5 +14,6 @@ public class PeluqueriaCanina {
         Principal princ = new Principal();
         princ.setVisible(true);
         princ.setLocationRelativeTo(null);
+        // FIJARSE LOS COMENTARIOS
     }
 }
