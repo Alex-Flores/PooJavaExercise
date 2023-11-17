@@ -10,6 +10,7 @@ public class PooJavaExercise {
         String nombre, apellido, num_cuenta;
         double tipo;
         int saldo;
+        int valor;
         
         Cuenta pago1 = new Cuenta();
         
@@ -31,5 +32,12 @@ public class PooJavaExercise {
         pago1.setTipo(tipo);
         
         System.out.println(pago1.mensaje());
+        
+        Contador cuenta = new Contador();
+        System.out.println("Ingrese un valor: ");
+        valor = sc.nextInt();
+        cuenta.setCtd(valor);
+        System.out.println(cuenta.incrementar());
+        System.out.println(cuenta.decrementar());
     }
 }
